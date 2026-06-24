@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR_USERNAME/flask-jenkins-ci-cd.git'
+                git branch: 'main', url: 'https://github.com/mohamedrb/flask-jenkins-ci-cd.git'
             }
         }
 
@@ -45,13 +45,13 @@ pipeline {
 
     post {
         success {
-            mail to: 'your-email@example.com',
+            mail to: 'mohamedrb@gmail.com',
                  subject: "SUCCESS: Jenkins Build Passed",
                  body: "Your Flask CI/CD pipeline executed successfully."
         }
 
         failure {
-            mail to: 'your-email@example.com',
+            mail to: 'mohamedrb@gmail.com',
                  subject: "FAILED: Jenkins Build Failed",
                  body: "Check Jenkins logs for details."
         }
